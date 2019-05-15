@@ -6,7 +6,7 @@ interface State {
 }
 export type ErrorChild = React.ReactNode | ((error?: Error, errorInfo?: React.ErrorInfo) => React.ReactNode);
 export default function catchable<T>(WrappedComponent: React.ComponentType<T>, errorChild: ErrorChild = null): React.ComponentType<T> {
-    return class CatchableComponetn extends React.Component<T, State> {
+    return class CatchableComponent extends React.Component<T, State> {
         constructor(props) {
             super(props);
             this.state = { throw: false, errorInfo: null, error: null };
@@ -18,11 +18,11 @@ export default function catchable<T>(WrappedComponent: React.ComponentType<T>, e
         }
 
         private renderError = () => {
-            if (!errorChild) return "<span style='color:red'>Crashed</span>"
+            if (!errorChild) return <span style={{ color: 'red' }}>Crashed</span>
             try {
                 return typeof errorChild === "function" ? errorChild(this.state.error, this.state.errorInfo) : errorChild;
             } catch (error) {
-                return "<span style='color:red'>Error Child Crashed</span>"
+                return <span style={{ color: 'red' }}>Error Child Crashed</span>
             }
         }
 

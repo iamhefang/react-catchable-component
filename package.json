@@ -1,18 +1,19 @@
 {
   "name": "react-catchable-component",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "tsc"
   },
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "@types/react": "^16.8.17",
-    "@types/react-dom": "^16.8.4",
+    "@types/react": "^16.0.0",
+    "@types/react-dom": "^16.0.0",
     "typescript": "^3.4.5"
   },
   "repository": {

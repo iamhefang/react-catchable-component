@@ -2,3 +2,7 @@
 /node_modules
 tsconfig.json
 *.tgz
+*.log
+*.lock
+.npmignore
+.gitignore
