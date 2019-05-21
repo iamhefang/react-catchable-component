@@ -1,3 +1,5 @@
+该组件不再维护,请使用[react-catchable](https://github.com/iamhefang/react-catchable)
+
 # react-catchable-component
 在React组件异常导致整个页面崩溃的解决方案
 
